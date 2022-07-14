@@ -77,14 +77,13 @@ function getRandomQuote () {
 /***
  * `printQuote` function
 ***/
-let html = '';
 function printQuote () {
   let quote = getRandomQuote ();
-  html += `<p class="quote">${quotes.quote}</p>
-  <p class="source">${quotes.source}</p>`
+
+  let html = `<p class="quote">${quote.quote}</p>
+  <p class="source">${quote.source}</p>`
   return(document.getElementById("quote-box").innerHtml = html);
   };
-printQuote();
 
 /***
  * click event listener for the print quote button
