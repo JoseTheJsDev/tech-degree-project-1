@@ -19,49 +19,49 @@ const quotes = [
   },
  {
     quote:  "Let us always meet each other with smile, for the smile is the beginning of love.",
-    source: 'Mother Tersa',
+    source: '-Mother Tersa',
     citation: '"Mother Teresa Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
     year: '2002'
   },
  {
     quote: "The topic of leadership is a touchy one. A lot of leaders fail because they don't have the bravery to touch that nerve or strike that chord. Throughout my years, I haven't had that fear.",
-    source: 'Kobe Bryant',
+    source: '-Kobe Bryant',
     citation: '"Kobe Bryant Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
     year: '2022'
   },
  {
-    quote: 'Good leadership consists of showing average people how to do the work of superior people.',
-    source: 'John D. Rockefeller' ,
-    citation: 'John D. Rockefeller Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
-    year: '1919'
+    quote: 'Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.',
+    source: '- Alber Einstein' ,
+    citation: 'Alber Einstein Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
+    year: '1909'
  },
 
  {
-  quote: 'Good leadership consists of showing average people how to do the work of superior people.',
-  source: 'John D. Rockefeller' ,
-  citation: 'John D. Rockefeller Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
+  quote: 'Sometimes the questions are complicated, and the answers are simple.',
+  source: '-Dr.Seuss' ,
+  citation: 'Dr. Seuss Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
   year: '1919'
 },
 
 {
-  quote: 'Good leadership consists of showing average people how to do the work of superior people.',
-  source: 'John D. Rockefeller' ,
-  citation: 'John D. Rockefeller Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
+  quote: 'There are only two great tragedies in life: one is not getting what you want and the other is getting it.',
+  source: '- Oscar Wilde' ,
+  citation: 'Oscar Wilde Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
   year: '1919'
 },
 
 {
-  quote: 'Good leadership consists of showing average people how to do the work of superior people.',
-  source: 'John D. Rockefeller' ,
-  citation: 'John D. Rockefeller Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
-  year: '1919'
+  quote: 'Anyone who has never made a mistake has never tried anything new.',
+  source: 'Alber Einstein' ,
+  citation: 'Alber Einstein Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
+  year: '1910'
 },
 
 {
-  quote: 'Good leadership consists of showing average people how to do the work of superior people.',
-  source: 'John D. Rockefeller' ,
-  citation: 'John D. Rockefeller Quotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
-  year: '1919'
+  quote: 'It’s not that I’m so smart. It’s just that I stay with problems longer.',
+  source: 'Alber Einstein' ,
+  citation: 'Alber EinsteinQuotes." BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
+  year: '1911'
 },
 ];
 
@@ -79,11 +79,15 @@ function getRandomQuote () {
 ***/
 function printQuote () {
   let quote = getRandomQuote ();
-
-  let html = `<p class="quote">${quote.quote}</p>
-  <p class="source">${quote.source}</p>`
-  return(document.getElementById("quote-box").innerHtml = html);
-  };
+  let html = `<p class="quote">${quote.quote}</p>;
+   <p < class="source">${quote.source};
+    if (quote.citation = true) {
+     html =  <span class ="citation">${quote.citation}</span>;
+    }
+    if (quote.year = true) {
+     html = <span class = "year">${quote.year}</span></p>`;
+  return(document.getElementById("quote-box").innerHTML = html);
+    }
 
 /***
  * click event listener for the print quote button
