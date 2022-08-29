@@ -13,7 +13,7 @@ project 1 - A Random Quote Generator
 const quotes = [
   {
     quote:  "The important thing is that your teammates have to know you're pulling for them and you really want them to be successful.",
-    source: 'Kobe Bryant',
+    source: '-Kobe Bryant',
     citation: 'Kobe Bryant Quotes | BrainyQuote.com, BrainyMedia Inc, 2022.',
     year: '2017'
   },
@@ -31,7 +31,7 @@ const quotes = [
   },
  {
     quote: "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.",
-    source: '- Alber Einstein' ,
+    source: '-Alber Einstein' ,
     citation: 'Alber Einstein Quotes | BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
     year: '1909'
  },
@@ -45,21 +45,21 @@ const quotes = [
 
 {
   quote: "There are only two great tragedies in life: one is not getting what you want and the other is getting it.",
-  source: 'Oscar Wilde',
+  source: '-Oscar Wilde',
   citation: 'Oscar Wilde Quotes | BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
   year: '1919'
 },
 
 {
   quote: "Anyone who has never made a mistake has never tried anything new.",
-  source: 'Alber Einstein' ,
+  source: '-Alber Einstein' ,
   citation: 'Alber Einstein Quotes | BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
   year: '1910'
 },
 
 {
   quote: "It's not that I'm so smart. It's just that I stay with problems longer.",
-  source: 'Alber Einstein' ,
+  source: '-Alber Einstein' ,
   citation: 'Alber EinsteinQuotes | BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
   year: '1911'
 },
@@ -79,8 +79,8 @@ function getRandomQuote () {
 ***/
 function printQuote () {
   let quote = getRandomQuote ();
-  let html = `<p class="quote">${quote.quote}</p>`;
-   `<p class="source">${quote.source}`
+  let html = `<p class="quote">${quote.quote}</p>
+   <p class="source">${quote.source}`
     if (quote.citation !== undefined) {
      html += `<span class ="citation">${quote.citation}</span>`;
     }

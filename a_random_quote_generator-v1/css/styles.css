@@ -1,4 +1,4 @@
-/** 
+/* 
  * Treehouse FSJS Techdegree
  * Random Quote Generator - CSS
  */
@@ -7,7 +7,7 @@
 
 body {
   background-color: rgb(58, 193, 98);
-  color: white;
+  color: red;
   font-family: 'Playfair Display', serif;
   padding: 5px;
 }
@@ -27,7 +27,7 @@ h1 {
 }
 
 .load-quote {
-  color: #fff;
+  color: babyblue; 
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
   width: 12em;
   max-height: 75px;
