@@ -10,6 +10,7 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array of objects
 ***/
+let colors = ['blue', 'yellow', 'green', 'orange'];
 const quotes = [
   {
     quote:  "The important thing is that your teammates have to know you're pulling for them and you really want them to be successful.",
@@ -85,11 +86,16 @@ function printQuote () {
      html += `<span class ="citation">${quote.citation}</span>`;
     }
     if (quote.year !== undefined) {
-     html += `<span class = "year">${quote.year}</span></p>`;
-  return(document.getElementById("quote-box").innerHTML = html);
+     html += `<span class = "year">${quote.year}</span>;
     }
+    </p>`
+  }
+    return(document.getElementById("quote-box").innerHTML = html);
   }
 
+  function getRandomColor () {
+    var randomColor = colors[Math.floor(Math.random() = colors.lenght)]
+  }
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
