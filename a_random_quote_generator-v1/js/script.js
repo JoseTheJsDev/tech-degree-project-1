@@ -79,7 +79,7 @@ function getRandomQuote () {
  * `printQuote` function
 ***/
 function printQuote () {
-  document.body.style.backgroundColor = getRandomColor;
+  document.body.style.backgroundColor = getRandomColor();
   let quote = getRandomQuote ();
   let html = `<p class="quote">${quote.quote}</p>
    <p class="source">${quote.source}`
@@ -95,8 +95,9 @@ function printQuote () {
   }
 
   function getRandomColor () {
-    let randomColor = colors[Math.floor(Math.random = colors.length)]
+    return colors[Math.random() * 3]
   }
+  
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
