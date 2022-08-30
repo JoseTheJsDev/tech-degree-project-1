@@ -94,7 +94,7 @@ function printQuote () {
   }
 
   function getRandomColor () {
-   document.body.style.backgroundColor = colors[Math.floor(Math.random() = colors.lenght)]
+    let test = colors[Math.floor(Math.random = colors.length)]
   }
 /***
  * click event listener for the print quote button
