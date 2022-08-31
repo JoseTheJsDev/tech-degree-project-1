@@ -10,7 +10,7 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array of objects
 ***/
-const colors = ['blue', 'yellow', 'green', 'orange'];
+const colors = ['blue', 'teal', 'green', 'orange'];
 const quotes = [
   {
     quote:  "The important thing is that your teammates have to know you're pulling for them and you really want them to be successful.",
@@ -95,7 +95,7 @@ function printQuote () {
   }
 
   function getRandomColor () {
-    return colors[Math.random() * 3]
+    return colors[Math.floor(Math.random() * 3)]
   }
   
 /***
