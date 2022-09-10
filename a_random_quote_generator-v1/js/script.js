@@ -93,9 +93,9 @@ function printQuote () {
      html += `<span class = "year">${quote.year}</span>`;
     }
     if (quote.tag !== undefined) {
-      html += `<span class = "tag">${quote.tag}</span>`;
+      html += `<span class = "tag">${quote.tag}</span>;
      }
-    `</p>`
+    </p>`
   }
       return(document.getElementById("quote-box").innerHTML = html);
   }
