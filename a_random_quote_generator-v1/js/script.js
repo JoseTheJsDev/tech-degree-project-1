@@ -15,8 +15,9 @@ const quotes = [
   {
     quote:  "The important thing is that your teammates have to know you're pulling for them and you really want them to be successful.",
     source: '-Kobe Bryant',
-    citation: 'Kobe Bryant Quotes | BrainyQuote.com, BrainyMedia Inc, 2022.',
+    citation: 'Kobe Bryant Quotes | BrainyQuote.com, BrainyMedia Inc, 2022. ',
     year: '2017'
+    
   },
  {
     quote:  "Let us always meet each other with smile, for the smile is the beginning of love.",
@@ -32,9 +33,10 @@ const quotes = [
   },
  {
     quote: "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.",
-    source: '-Alber Einstein' ,
-    citation: 'Alber Einstein Quotes | BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022.',
-    year: '1909'
+    source: '- Albert Einstein' ,
+    citation: 'Alber Einstein Quotes | BrainyQuote.com. BrainyMedia Inc, 2022. 12 July 2022',
+    year: '1909',
+    tag: 'Author'
  },
 
  {
@@ -66,9 +68,9 @@ const quotes = [
 },
 ];
 
-
 /***
- * `getRandomQuote` function
+ *`getRandomQuote` function
+ * takes the lenght of the quote array and generates a random quote
 ***/
 function getRandomQuote () {
   let randomQuote = quotes[Math.floor(Math.random () * quotes.length)]; 
@@ -77,6 +79,7 @@ function getRandomQuote () {
 
 /***
  * `printQuote` function
+ * diplays quote from random quote function to page
 ***/
 function printQuote () {
   document.body.style.backgroundColor = getRandomColor();
@@ -87,18 +90,21 @@ function printQuote () {
      html += `<span class ="citation">${quote.citation}</span>`;
     }
     if (quote.year !== undefined) {
-     html += `<span class = "year">${quote.year}</span>;
+     html += `<span class = "year">${quote.year}</span>`;
     }
-    </p>`
+    if (quote.tag !== undefined) {
+      html += `<span class = "tag">${quote.tag}</span>`;
+     }
+    `</p>`
   }
-    return(document.getElementById("quote-box").innerHTML = html);
+      return(document.getElementById("quote-box").innerHTML = html);
   }
-
+  // generates a random color from the colors array on button click
   function getRandomColor () {
     return colors[Math.floor(Math.random() * 8)]
   }
-  
-  setInterval(printQuote, 3000);
+  // interval to rotate between color and quotes, set for five seconds
+  setInterval(printQuote, 4000);
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
